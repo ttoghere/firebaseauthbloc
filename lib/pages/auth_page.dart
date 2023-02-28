@@ -1,4 +1,4 @@
-import 'package:firebaseauthbloc/pages/sign_in_page.dart';
+import 'package:firebaseauthbloc/pages/signIn_page.dart';
 import 'package:flutter/material.dart';
 
 class AuthPage extends StatelessWidget {
@@ -20,10 +20,11 @@ class AuthPage extends StatelessWidget {
             ),
           ),
           ElevatedButton(
-              onPressed: () {
-                Navigator.of(context).pushNamed(SignInPage.routeName);
-              },
-              child: Text("Sign In"))
+            onPressed: () {
+              Navigator.of(context).pushNamed(LoginPage.routeName);
+            },
+            child: Text("Sign In"),
+          ),
         ],
       ),
     );

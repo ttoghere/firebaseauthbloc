@@ -2,12 +2,13 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebaseauthbloc/blocs/Auth/auth_bloc.dart';
 import 'package:firebaseauthbloc/cubits/signIn/sign_in_cubit.dart';
+import 'package:firebaseauthbloc/cubits/signUp/sign_up_cubit.dart';
 import 'package:firebaseauthbloc/pages/auth_page.dart';
 import 'package:firebaseauthbloc/pages/error_screen.dart';
 import 'package:firebaseauthbloc/pages/home_page.dart';
 import 'package:firebaseauthbloc/pages/profile_page.dart';
-import 'package:firebaseauthbloc/pages/sign_in_page.dart';
-import 'package:firebaseauthbloc/pages/sign_up_page.dart';
+import 'package:firebaseauthbloc/pages/signIn_page.dart';
+import 'package:firebaseauthbloc/pages/signUp_page.dart';
 import 'package:firebaseauthbloc/pages/splash_page.dart';
 import 'package:firebaseauthbloc/repositories/auth_repository.dart';
 import 'package:flutter/material.dart';
@@ -51,6 +52,11 @@ class MyApp extends StatelessWidget {
               context.read<AuthRepository>(),
             ),
           ),
+          BlocProvider(
+            create: (context) => SignupCubit(
+              authRepository: context.read<AuthRepository>(),
+            ),
+          ),
         ],
         child: MaterialApp(
           title: 'Material App',
@@ -59,10 +65,10 @@ class MyApp extends StatelessWidget {
           routes: {
             SplashPage.routeName: (context) => const SplashPage(),
             ProfilePage.routeName: (context) => ProfilePage(),
-            SignInPage.routeName: (context) => SignInPage(),
+            LoginPage.routeName: (context) => LoginPage(),
+            AuthPage.routeName: (context) => AuthPage(),
             SignUpPage.routeName: (context) => SignUpPage(),
             HomePage.routeName: (context) => HomePage(),
-            AuthPage.routeName: (context) => AuthPage(),
             ErrorPage.routeName: (context) => ErrorPage(),
           },
           initialRoute: SplashPage.routeName,

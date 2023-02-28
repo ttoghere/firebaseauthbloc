@@ -23,7 +23,8 @@ class SignInCubit extends Cubit<SignInState> {
     } on CustomError catch (error) {
       log(error.toString());
       emit(
-          state.copyWith(signInStatus: SignInStatus.error, customError: error));
+        state.copyWith(signInStatus: SignInStatus.error, customError: error),
+      );
     }
   }
 }
