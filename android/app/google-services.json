@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "681996567667",
+    "project_id": "datingapp-12",
+    "storage_bucket": "datingapp-12.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:681996567667:android:a4bfe4f051656beb861606",
+        "android_client_info": {
+          "package_name": "com.example.firebaseauthbloc"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "681996567667-rmhrttht29gdvj8e0lc4s271b9hha8mg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDpNYXV2U9_lsYLArVZE8FFEEoleHw2k1Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "681996567667-rmhrttht29gdvj8e0lc4s271b9hha8mg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
